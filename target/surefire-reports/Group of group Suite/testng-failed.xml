@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Group of group Suite]" verbose="0">
+  <test name="Group of group Test(failed)" preserve-order="true">
+    <classes>
+      <class name="com.heroku.home.HomePge">
+        <methods>
+          <include name="handle_Autocomplete"/>
+          <include name="home_Page_Load"/>
+          <include name="Before"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
