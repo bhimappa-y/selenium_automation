@@ -46,7 +46,7 @@ public class HomePge extends BaseTest {
         driver.navigate().back();
         String name= homePageObject.getElementForAuto("Buttons");
         logger.info("Name of h1 : " + name);
-        //Assert.assertEquals("Buttons", name);
+        Assert.assertEquals("Primary", name);
     }
 
 

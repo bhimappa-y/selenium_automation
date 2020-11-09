@@ -19,6 +19,11 @@ public class HomePageSeleniumObjects extends BaseTest {
     }
 
     public String getElementForAuto(String autocomplete) throws InterruptedException {
+        if(autocomplete.equals("Buttons")){
+            getElement(autocomplete).click();
+            Thread.sleep(2000);
+            return driver.findElement(By.xpath("//button[contains(text(),'Primary')]")).getText();
+        }
         getElement(autocomplete).click();
         Thread.sleep(1000);
         return getEleText();
