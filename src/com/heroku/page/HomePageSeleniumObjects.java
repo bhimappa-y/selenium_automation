@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -25,18 +27,22 @@ public class HomePageSeleniumObjects extends BaseTest {
             return driver.findElement(By.xpath("//button[contains(text(),'Primary')]")).getText();
         }
         getElement(autocomplete).click();
-        Thread.sleep(1000);
+
         return getEleText();
     }
 
-    private String getEleText() {
-       return driver.findElement(By.cssSelector("h1")).getText();
+    private String getEleText() throws InterruptedException {
+       //return new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h1"))).getText();
+        Thread.sleep(1000);
+        return  driver.findElement(By.cssSelector("h1")).getText();
+
     }
 
     private WebElement getElement(String parameterElement) {
         String ele = "//a[contains(text(), '"+parameterElement+"')]";
-        List<WebElement> elements = driver.findElements(By.xpath(ele));
-        return elements.get(1);
+        List<WebElement> webElements = new WebDriverWait(driver, 10).
+                                        until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(ele)));
+        return webElements.get(1);
     }
 
 }

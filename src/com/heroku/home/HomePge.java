@@ -28,7 +28,6 @@ public class HomePge extends BaseTest {
 
    @Test
     public void test01_home_Page_Load() throws InterruptedException {
-        Thread.sleep(5000);
         logger.info("Title of the Page : "+driver.getTitle());
         Assert.assertEquals("Formy", driver.getTitle());
     }
