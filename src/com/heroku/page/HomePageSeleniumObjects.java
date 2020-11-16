@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-public class HomePageSeleniumObjects extends BaseTest {
+public class HomePageSeleniumObjects implements BasicMethodimplementation{
     private static Logger logger= Logger.getLogger(HomePageSeleniumObjects.class);
     WebDriver driver;
 
@@ -20,6 +20,7 @@ public class HomePageSeleniumObjects extends BaseTest {
         PageFactory.initElements(driver,this);
     }
 
+    @Override
     public String getElementForAuto(String autocomplete) throws InterruptedException {
         if(autocomplete.equals("Buttons")){
             getElement(autocomplete).click();
