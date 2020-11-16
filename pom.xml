@@ -83,11 +83,9 @@
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.22.2</version>
                 <configuration>
-                    <includes>
-                        <include>*Test.java</include>
-                    </includes>
-                    <parallel>classes</parallel>
-                    <threadCount>10</threadCount>
+                    <suiteXmlFiles>
+                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                    </suiteXmlFiles>
                 </configuration>
                 <executions>
                     <execution>

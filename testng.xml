@@ -2,7 +2,7 @@
 <suite name="Group of group Suite" verbose="1">
     <test name="Group of group Test">
         <classes>
-            <class name="com.heroku.home.HomePge" />
+            <class name="com.heroku.home.CheckBox" />
         </classes>
     </test>
 </suite>
