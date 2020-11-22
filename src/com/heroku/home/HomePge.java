@@ -1,6 +1,6 @@
 package com.heroku.home;
 
-import com.heroku.page.HomePageSeleniumObjects;
+import com.heroku.page.SeleniumPageObjects;
 import com.heroku.utility.BaseTest;
 import org.apache.log4j.Logger;
 
@@ -14,19 +14,18 @@ import org.testng.annotations.Test;
 public class HomePge extends BaseTest {
     private static Logger logger= Logger.getLogger(HomePge.class);
     private WebDriver driver;
-    private HomePageSeleniumObjects homePageObject;
+    private SeleniumPageObjects homePageObject;
 
     @BeforeClass
     public void Before(){
         driver = setup();
-        homePageObject = new HomePageSeleniumObjects(driver);
+        homePageObject = new SeleniumPageObjects(driver);
     }
 
     @DataProvider(name = "data-provider")
     public Object[][] dpMethod(){
         return new Object[][] {
                 {"Autocomplete","Autocomplete"},
-                {"Buttons","Primary"},
                 {"Checkbox","Checkboxes"},
                 {"Datepicker","Datepicker"},
                 {"Drag and Drop","Drag the image into the box"},

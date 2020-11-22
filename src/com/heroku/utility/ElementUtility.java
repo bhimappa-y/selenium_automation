@@ -22,4 +22,12 @@ public class ElementUtility {
                 until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath(ele)));
         return webElements.get(1);
     }
+
+    public static String getDropedText(WebDriver driver) {
+        String drop = "//p[contains(text(), 'Dropped!')]";
+
+        WebElement webEle = new WebDriverWait(driver, 10 ).until(ExpectedConditions.presenceOfElementLocated(By.xpath(drop)));
+
+        return webEle.getText();
+    }
 }
