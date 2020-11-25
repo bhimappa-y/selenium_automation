@@ -40,7 +40,7 @@ public class KeyAndMouse extends BaseTest {
 
     @Test
     public void clickCheckBox() throws InterruptedException {
-        logger.info("Executing CheckBox test case02!!!!!");
+        logger.info("Executing Key and mouse input test cases!!!!!");
         WebElement txtUsername = new WebDriverWait(driver, 10).until(ExpectedConditions.visibilityOfElementLocated(By.id("name")));
         Actions builder = new Actions(driver);
         Action seriesOfActions = builder
