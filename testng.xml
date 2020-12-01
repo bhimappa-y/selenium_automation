@@ -2,7 +2,13 @@
 <suite name="Group of group Suite" verbose="1">
     <test name="Group of group Test">
         <classes>
+            <class name="com.heroku.home.HomePge" />
             <class name="com.heroku.home.CheckBox" />
+            <class name="com.heroku.home.Autocomplete" />
+            <class name="com.heroku.home.DragAndDrop" />
+            <class name="com.heroku.home.DropDown" />
+            <class name="com.heroku.home.EnableAndDisable" />
+            <class name="com.heroku.home.FileUpload" />
         </classes>
     </test>
 </suite>

@@ -1,6 +1,6 @@
 package com.heroku.home;
 
-import com.heroku.page.CheckBoxPageSeleniumObjects;
+import com.heroku.page.SeleniumPageObjects;
 import com.heroku.utility.BaseTest;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
@@ -13,12 +13,12 @@ public class CheckBox extends BaseTest {
 
     private static Logger logger= Logger.getLogger(CheckBox.class);
     private WebDriver driver;
-    private CheckBoxPageSeleniumObjects checkBoxPage;
+    private SeleniumPageObjects checkBoxPage;
 
     @BeforeClass
     public void Before() throws InterruptedException {
         driver = setup();
-        checkBoxPage = new CheckBoxPageSeleniumObjects(driver);
+        checkBoxPage = new SeleniumPageObjects(driver);
         checkBoxPage.getElementForAuto("Checkbox");
     }
 
