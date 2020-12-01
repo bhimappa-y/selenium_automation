@@ -14,11 +14,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class KeyAndMouse extends BaseTest {
-
 
     private static Logger logger= Logger.getLogger(KeyAndMouse.class);
     private WebDriver driver;
@@ -37,7 +35,6 @@ public class KeyAndMouse extends BaseTest {
         driver.quit();
     }
 
-
     @Test
     public void clickCheckBox() throws InterruptedException {
         logger.info("Executing Key and mouse input test cases!!!!!");
@@ -52,12 +49,6 @@ public class KeyAndMouse extends BaseTest {
                 .doubleClick(txtUsername)
                 .contextClick()
                 .build();
-
         seriesOfActions.perform() ;
     }
-
-
-
-
-
 }
